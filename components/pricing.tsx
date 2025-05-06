@@ -42,11 +42,11 @@ export default function Pricing() {
           <p>Choose the plan that best fits your organization's needs and scale as you grow.</p>
         </div>
 
-        <div ref={pricingRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+        <div ref={pricingRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           <div className="pricing-card bg-white rounded-xl shadow-md p-8 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg fade-up">
-            <div className="pricing-tier text-lg font-bold text-primary mb-2">Free</div>
-            <div className="pricing-price text-4xl font-bold mb-4">$0</div>
-            <div className="pricing-period text-gray-500 mb-6">Trial</div>
+            <div className="pricing-tier text-lg font-bold text-primary mb-2">Basic</div>
+            <div className="pricing-price text-4xl font-bold mb-4">$99</div>
+            <div className="pricing-period text-gray-500 mb-6">per month</div>
             <ul className="pricing-features text-left mb-8">
               <li className="mb-2 flex items-start">
                 <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
@@ -54,45 +54,15 @@ export default function Pricing() {
               </li>
               <li className="mb-2 flex items-start">
                 <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Single user</span>
-              </li>
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
                 <span>Basic requirements analysis</span>
               </li>
               <li className="mb-2 flex items-start">
                 <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>14-day trial</span>
-              </li>
-            </ul>
-            <a
-              href="#contact"
-              className="block w-full py-3 px-6 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-full font-semibold transition-colors duration-300"
-            >
-              Try Free
-            </a>
-          </div>
-
-          <div className="pricing-card bg-white rounded-xl shadow-md p-8 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg fade-up fade-in-delay-1">
-            <div className="pricing-tier text-lg font-bold text-primary mb-2">Basic</div>
-            <div className="pricing-price text-4xl font-bold mb-4">$75</div>
-            <div className="pricing-period text-gray-500 mb-6">per user / month</div>
-            <ul className="pricing-features text-left mb-8">
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Up to 5 users</span>
+                <span>Standard rule set</span>
               </li>
               <li className="mb-2 flex items-start">
                 <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Core requirements analysis</span>
-              </li>
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Vulnerability detection</span>
-              </li>
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Integration with Jira/Azure DevOps</span>
+                <span>Email support</span>
               </li>
             </ul>
             <a
@@ -103,33 +73,33 @@ export default function Pricing() {
             </a>
           </div>
 
-          <div className="pricing-card bg-white rounded-xl shadow-md p-8 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg border-2 border-primary fade-up fade-in-delay-2">
+          <div className="pricing-card bg-white rounded-xl shadow-md p-8 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg border-2 border-primary fade-up fade-in-delay-1">
             <div className="pricing-tier text-lg font-bold text-primary mb-2">Pro</div>
-            <div className="pricing-price text-4xl font-bold mb-4">$100</div>
-            <div className="pricing-period text-gray-500 mb-6">per user / month</div>
+            <div className="pricing-price text-4xl font-bold mb-4">$299</div>
+            <div className="pricing-period text-gray-500 mb-6">per month</div>
             <div className="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
               POPULAR
             </div>
             <ul className="pricing-features text-left mb-8">
               <li className="mb-2 flex items-start">
                 <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Up to 20 users</span>
+                <span>Full feature set</span>
               </li>
               <li className="mb-2 flex items-start">
                 <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>All Basic features</span>
+                <span>Advanced requirements analysis</span>
               </li>
               <li className="mb-2 flex items-start">
                 <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Customizable rule engine</span>
+                <span>More projects/requirements analyzed</span>
               </li>
               <li className="mb-2 flex items-start">
                 <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Compliance reporting</span>
+                <span>Standard support</span>
               </li>
               <li className="mb-2 flex items-start">
                 <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Developer education</span>
+                <span>Integration with popular tools</span>
               </li>
             </ul>
             <a
@@ -140,18 +110,14 @@ export default function Pricing() {
             </a>
           </div>
 
-          <div className="pricing-card bg-white rounded-xl shadow-md p-8 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg fade-up fade-in-delay-3">
+          <div className="pricing-card bg-white rounded-xl shadow-md p-8 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg fade-up fade-in-delay-2">
             <div className="pricing-tier text-lg font-bold text-primary mb-2">Enterprise</div>
-            <div className="pricing-price text-4xl font-bold mb-4">Custom</div>
-            <div className="pricing-period text-gray-500 mb-6">Contact for pricing</div>
+            <div className="pricing-price text-4xl font-bold mb-4">$799</div>
+            <div className="pricing-period text-gray-500 mb-6">per month</div>
             <ul className="pricing-features text-left mb-8">
               <li className="mb-2 flex items-start">
                 <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Unlimited users</span>
-              </li>
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>All Pro features</span>
+                <span>Custom rule development</span>
               </li>
               <li className="mb-2 flex items-start">
                 <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
@@ -159,11 +125,15 @@ export default function Pricing() {
               </li>
               <li className="mb-2 flex items-start">
                 <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Advanced integrations</span>
+                <span>Unlimited users</span>
               </li>
               <li className="mb-2 flex items-start">
                 <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Custom rule development</span>
+                <span>Unlimited requirements analysis</span>
+              </li>
+              <li className="mb-2 flex items-start">
+                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
+                <span>Advanced integrations</span>
               </li>
               <li className="mb-2 flex items-start">
                 <i className="fas fa-check text-green-500 mr-2 mt-1"></i>

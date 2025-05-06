@@ -16,10 +16,10 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-              Security Begins at Requirements
+              Defining the security perimeter through structured requirements
             </h1>
             <p className="text-xl mb-8 max-w-xl mx-auto md:mx-0 text-white opacity-90">
-              ReqSecure is a SaaS solution that proactively identifies and mitigates security risks in software
+              EdgeReq Analytics is a SaaS solution that proactively identifies and mitigates security risks in software
               requirements <em>before</em> code is written, reducing costs and enhancing security.
             </p>
             <div className="flex flex-col md:flex-row gap-4">
@@ -30,10 +30,10 @@ export default function Hero() {
                 Explore Features
               </Link>
               <Link
-                href="#contact"
+                href="#pricing"
                 className="bg-transparent text-white border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all"
               >
-                Request Demo
+                View Pricing
               </Link>
             </div>
           </div>

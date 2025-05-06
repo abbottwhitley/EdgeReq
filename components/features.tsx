@@ -40,8 +40,8 @@ export default function Features() {
         <div className="section-title">
           <h2>Key Features</h2>
           <p>
-            ReqSecure provides a comprehensive solution for identifying and eliminating security vulnerabilities at the
-            requirements stage.
+            EdgeReq Analytics is a SaaS solution that proactively identifies and mitigates security risks in software
+            requirements <em>before</em> code is written, reducing costs and enhancing security.
           </p>
         </div>
 
@@ -50,20 +50,20 @@ export default function Features() {
             <div className="feature-icon">
               <i className="fas fa-search"></i>
             </div>
-            <h3 className="text-xl font-bold mb-4">Automated Analysis</h3>
+            <h3 className="text-xl font-bold mb-4">Proactive Requirements Analysis</h3>
             <p className="text-gray-600">
-              AI-powered and rule-based analysis of requirements documents to identify potential security
-              vulnerabilities.
+              Analyze requirements documents before code is written to identify potential security vulnerabilities early
+              in the SDLC.
             </p>
           </div>
 
           <div className="feature-card fade-up fade-in-delay-1">
             <div className="feature-icon">
-              <i className="fas fa-exclamation-triangle"></i>
+              <i className="fas fa-robot"></i>
             </div>
-            <h3 className="text-xl font-bold mb-4">Risk Scoring</h3>
+            <h3 className="text-xl font-bold mb-4">Automated Security Validation</h3>
             <p className="text-gray-600">
-              Quantify security risks with a comprehensive scoring system to prioritize mitigation efforts.
+              AI-powered and rule-based analysis automatically identifies potential weaknesses in your requirements.
             </p>
           </div>
 
@@ -81,19 +81,20 @@ export default function Features() {
             <div className="feature-icon">
               <i className="fas fa-puzzle-piece"></i>
             </div>
-            <h3 className="text-xl font-bold mb-4">Integration Capabilities</h3>
+            <h3 className="text-xl font-bold mb-4">SDLC Integration</h3>
             <p className="text-gray-600">
-              Seamlessly integrate with popular development tools like Jira, Azure DevOps, and more.
+              Seamlessly integrate with popular development tools like Jira, Azure DevOps, and other ALM tools.
             </p>
           </div>
 
           <div className="feature-card fade-up fade-in-delay-1">
             <div className="feature-icon">
-              <i className="fas fa-sliders-h"></i>
+              <i className="fas fa-shield-alt"></i>
             </div>
-            <h3 className="text-xl font-bold mb-4">Customizable Rules</h3>
+            <h3 className="text-xl font-bold mb-4">Supply Chain Security</h3>
             <p className="text-gray-600">
-              Tailor security rules to your specific industry and compliance needs with our flexible rule engine.
+              Analyze requirements for dependencies and third-party components to identify potential supply chain
+              vulnerabilities.
             </p>
           </div>
 
@@ -101,9 +102,40 @@ export default function Features() {
             <div className="feature-icon">
               <i className="fas fa-file-alt"></i>
             </div>
-            <h3 className="text-xl font-bold mb-4">Comprehensive Reporting</h3>
+            <h3 className="text-xl font-bold mb-4">Compliance Support</h3>
             <p className="text-gray-600">
-              Generate detailed reports for stakeholders, auditors, and compliance purposes.
+              Generate detailed reports for stakeholders, auditors, and compliance with regulatory frameworks.
+            </p>
+          </div>
+
+          <div className="feature-card fade-up">
+            <div className="feature-icon">
+              <i className="fas fa-sliders-h"></i>
+            </div>
+            <h3 className="text-xl font-bold mb-4">Customizable Rule Sets</h3>
+            <p className="text-gray-600">
+              Tailor security rules to your specific industry and compliance needs with our flexible rule engine.
+            </p>
+          </div>
+
+          <div className="feature-card fade-up fade-in-delay-1">
+            <div className="feature-icon">
+              <i className="fas fa-user-shield"></i>
+            </div>
+            <h3 className="text-xl font-bold mb-4">User-Friendly Interface</h3>
+            <p className="text-gray-600">
+              Intuitive interface designed for both security experts and developers to easily understand and act on
+              findings.
+            </p>
+          </div>
+
+          <div className="feature-card fade-up fade-in-delay-2">
+            <div className="feature-icon">
+              <i className="fas fa-chart-line"></i>
+            </div>
+            <h3 className="text-xl font-bold mb-4">Reporting and Metrics</h3>
+            <p className="text-gray-600">
+              Comprehensive reports and dashboards to track security improvements and demonstrate ROI.
             </p>
           </div>
         </div>

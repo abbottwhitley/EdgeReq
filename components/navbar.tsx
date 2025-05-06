@@ -29,8 +29,9 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="text-xl font-bold">
-            <span style={{ color: "#4361ee" }}>Req</span>
-            <span style={{ color: "#3a0ca3" }}>Secure</span>
+            <span style={{ color: "#4361ee" }}>Edge</span>
+            <span style={{ color: "#3a0ca3" }}>Req</span>
+            <span style={{ color: "#4361ee" }}> Analytics</span>
           </Link>
 
           <button
@@ -48,7 +49,7 @@ export default function Navbar() {
             <ul className="flex flex-col md:flex-row md:items-center">
               <li className="py-2 md:py-0 md:px-3">
                 <Link href="#why" className="hover:text-blue-600">
-                  Why ReqSecure
+                  Why EdgeReq
                 </Link>
               </li>
               <li className="py-2 md:py-0 md:px-3">
@@ -98,6 +99,16 @@ export default function Navbar() {
                   className={`absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md py-2 z-50 transition-all duration-200 ${isBusinessDevOpen ? "block" : "hidden"}`}
                 >
                   <Link
+                    href="/business-dev/pain-points"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    onClick={() => {
+                      setIsBusinessDevOpen(false)
+                      setIsMenuOpen(false)
+                    }}
+                  >
+                    Pain Point Analysis
+                  </Link>
+                  <Link
                     href="/business-dev/market-research"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     onClick={() => {
@@ -108,14 +119,14 @@ export default function Navbar() {
                     Market Research
                   </Link>
                   <Link
-                    href="/business-dev/pain-points"
+                    href="/business-dev/concept"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     onClick={() => {
                       setIsBusinessDevOpen(false)
                       setIsMenuOpen(false)
                     }}
                   >
-                    Pain Point Analysis
+                    Concept Development
                   </Link>
                   <Link
                     href="/business-dev/needs-validation"
@@ -128,14 +139,64 @@ export default function Navbar() {
                     Consumer Needs Validation
                   </Link>
                   <Link
-                    href="/business-dev/concept"
+                    href="/business-dev/seed-investment"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     onClick={() => {
                       setIsBusinessDevOpen(false)
                       setIsMenuOpen(false)
                     }}
                   >
-                    Concept Development
+                    Seed Investment
+                  </Link>
+                  <Link
+                    href="/business-dev/strategy"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    onClick={() => {
+                      setIsBusinessDevOpen(false)
+                      setIsMenuOpen(false)
+                    }}
+                  >
+                    Go-to-Market Strategy
+                  </Link>
+                  <Link
+                    href="/business-dev/revenue-analysis"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    onClick={() => {
+                      setIsBusinessDevOpen(false)
+                      setIsMenuOpen(false)
+                    }}
+                  >
+                    Revenue Analysis
+                  </Link>
+                  <Link
+                    href="/business-dev/team-analysis"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    onClick={() => {
+                      setIsBusinessDevOpen(false)
+                      setIsMenuOpen(false)
+                    }}
+                  >
+                    Team Analysis
+                  </Link>
+                  <Link
+                    href="/business-dev/challenge-mitigation"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    onClick={() => {
+                      setIsBusinessDevOpen(false)
+                      setIsMenuOpen(false)
+                    }}
+                  >
+                    Challenge Mitigation
+                  </Link>
+                  <Link
+                    href="/business-dev/success-metrics"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    onClick={() => {
+                      setIsBusinessDevOpen(false)
+                      setIsMenuOpen(false)
+                    }}
+                  >
+                    Success Metrics
                   </Link>
                 </div>
               </li>

@@ -3,8 +3,8 @@ import type { Metadata } from "next"
 import Navbar from "@/components/navbar"
 
 export const metadata: Metadata = {
-  title: "ReqSecure - Business Development",
-  description: "Business development resources and research for ReqSecure",
+  title: "EdgeReq Analytics - Business Development",
+  description: "Business development resources and research for EdgeReq Analytics",
 }
 
 export default function BusinessDevLayout({

@@ -15,34 +15,44 @@ export default function MarketResearchPage() {
             Software Requirements Evaluation for Security Risks: Market Research Report
           </h2>
 
-          <p className="mb-6">
-            This report analyzes the market landscape, trends, and niche opportunities for software requirements
-            evaluation for security risks, with a focus on building a focused application to address this need.
-          </p>
+          <div className="mb-6">
+            <h3 className="text-xl font-bold text-primary mb-3">Executive Summary</h3>
+            <p className="mb-4">
+              This report analyzes the market for software requirements evaluation tools focusing on security risks. The
+              objective is to assess the landscape, identify trends, and pinpoint niche opportunities for EdgeReq
+              Analytics, a focused application that evaluates uploaded software requirements for potential security
+              vulnerabilities. The market presents significant growth potential driven by increasing cybersecurity
+              threats and the need for proactive security measures. A dedicated tool for requirements evaluation
+              addresses an underserved need, offering a proactive approach to security risk mitigation.
+            </p>
+          </div>
 
           <div className="mb-8">
             <h3 className="text-xl font-bold text-primary mb-3">1. Market Landscape</h3>
             <ul className="list-disc pl-6 space-y-4">
               <li>
-                <strong>Overall Cybersecurity Risk Assessment Market:</strong> The cybersecurity risk assessment market
-                is experiencing significant growth. According to Verified Market Research, the market was valued at USD
-                4.54 Billion in 2024 and is projected to reach USD 27.07 Billion by 2031, growing at a Compound Annual
-                Growth Rate (CAGR) of 25%. Mordor Intelligence projects a CAGR of 14.25% for the Cybersecurity Risk
-                Assessment market during the forecast period.
+                <strong>Market Size & Growth:</strong> The overall security assessment market is experiencing
+                substantial growth. Verified Market Research projects the Security Assessment Market to reach USD 27.07
+                Billion by 2031, growing at a CAGR of 25%. The security and vulnerability management market is projected
+                to grow from USD 16.51 billion in 2024 to USD 24.04 billion by 2030.
               </li>
               <li>
-                <strong>Key Players:</strong> While this research did not identify specific vendors that explicitly
-                address <em>requirements</em> evaluation, the general market includes vendors of security risk
-                assessment tools. Examples include:
+                <strong>Key Players:</strong> The market includes a range of players, from established cybersecurity
+                vendors to niche providers. Some general risk assessment tool providers include:
                 <ul className="list-disc pl-6 mt-2">
+                  <li>AssessNET</li>
+                  <li>RAMs App</li>
+                  <li>EcoOnline</li>
                   <li>SentinelOne</li>
                   <li>DataGuard</li>
-                  <li>Other vendors, such as those providing risk management software</li>
+                  <li>Gartner (Buyer insights)</li>
                 </ul>
               </li>
               <li>
-                <strong>Current Focus:</strong> Current market offerings predominantly focus on post-development
-                security assessments, vulnerability scanning, penetration testing, and IT risk assessments.
+                <strong>Market Dynamics:</strong> The market is driven by the rising number of cyberattacks, increasing
+                regulatory requirements (e.g., GDPR, CCPA), and the need for robust security postures across all
+                organizations. Risk assessment is crucial for compliance, incident response, and overall business
+                continuity.
               </li>
             </ul>
           </div>
@@ -51,181 +61,105 @@ export default function MarketResearchPage() {
             <h3 className="text-xl font-bold text-primary mb-3">2. Broader Trends</h3>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong>Proactive Security:</strong> There is a growing trend toward proactive security measures, aiming
-                to identify and mitigate risks early in the software development lifecycle (SDLC).
+                <strong>Shift Left Security:</strong> There is a growing trend toward integrating security earlier in
+                the software development lifecycle (shift left). This includes incorporating security considerations
+                during the requirements gathering and design phases.
               </li>
               <li>
-                <strong>Shift-Left Approach:</strong> The "shift-left" approach in software development emphasizes
-                moving security activities earlier in the SDLC. This includes incorporating security considerations into
-                the requirements phase.
+                <strong>Automation:</strong> Automation of security tasks, including vulnerability scanning and risk
+                assessment, is becoming increasingly important.
               </li>
               <li>
-                <strong>Automation:</strong> Automation is increasingly being used for vulnerability scanning, code
-                analysis, and other security-related tasks.
+                <strong>Integration:</strong> The need for seamless integration of security tools with existing
+                development and DevOps workflows.
               </li>
               <li>
-                <strong>Supply Chain Security:</strong> Managing software supply chain risk is a critical concern,
-                requiring scrutiny of third-party components and dependencies.
-              </li>
-            </ul>
-          </div>
-
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">3. Niche Opportunities: Underserved Needs</h3>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>
-                <strong>Requirements-Level Security Risk Assessment:</strong> The most significant niche opportunity
-                lies in providing a solution that specifically evaluates software requirements for potential security
-                vulnerabilities <em>before</em> coding begins.
+                <strong>Focus on Supply Chain Security:</strong> Addressing vulnerabilities in the software supply chain
+                is a critical trend. The Open Source Security and Risk Analysis Report highlights the importance of
+                visibility into the software supply chain.
               </li>
               <li>
-                <strong>Early Vulnerability Identification:</strong> There is a clear need for tools and techniques that
-                can proactively identify and address security flaws at the requirements stage. This is an underserved
-                area, with existing tools mainly focusing on post-development assessments.
-              </li>
-              <li>
-                <strong>Threat Modeling Integration:</strong> Integrating threat modeling techniques directly into the
-                requirements process.
-              </li>
-              <li>
-                <strong>Automated Requirements Analysis:</strong> Developing automated tools to analyze requirements
-                documents for security-related keywords, phrases, and potential risks. This could involve Natural
-                Language Processing (NLP) techniques.
-              </li>
-              <li>
-                <strong>Integration with Existing Tools:</strong> Providing integration with existing requirements
-                management tools to streamline the security review process.
-              </li>
-              <li>
-                <strong>Education and Training:</strong> Developing educational resources and training programs focused
-                on writing secure requirements and conducting requirements-level security assessments.
+                <strong>Cloud Security:</strong> As organizations migrate to the cloud, securing cloud environments and
+                applications is a primary concern.
               </li>
             </ul>
           </div>
 
           <div className="mb-8">
             <h3 className="text-xl font-bold text-primary mb-3">
-              4. Techniques and Methodologies for Requirements Evaluation
+              3. Underserved Niches and Opportunity for Targeted Application
             </h3>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong>Threat Modeling:</strong> Applying threat modeling methodologies (e.g., STRIDE) to the
-                requirements phase to identify potential threats and vulnerabilities.
-                <ul className="list-disc pl-6 mt-2">
-                  <li>
-                    STRIDE: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of
-                    Privilege.
-                  </li>
-                </ul>
+                <strong>Requirements-Based Security Risk Analysis:</strong> While many tools address post-development
+                security vulnerabilities, fewer tools specifically evaluate security risks{" "}
+                <em>at the software requirements stage</em>. This represents a significant opportunity. Analyzing
+                requirements can identify design flaws, ambiguous specifications, and potential vulnerabilities before
+                code is written, significantly reducing the cost and effort of remediation.
               </li>
               <li>
-                <strong>Requirements Elicitation Best Practices:</strong> Using structured techniques for gathering and
-                documenting requirements, emphasizing security considerations.
+                <strong>Proactive Risk Mitigation:</strong> The ability to proactively identify risks in requirements
+                allows organizations to mitigate potential threats from the outset of the software development process.
               </li>
               <li>
-                <strong>Security Requirements Checklists:</strong> Employing checklists based on industry best practices
-                (e.g., OWASP) to ensure the inclusion of necessary security requirements.
+                <strong>Automated Requirements Analysis:</strong> An application that automatically analyzes
+                requirements documents for security-related keywords, potential vulnerabilities (e.g., related to input
+                validation, authentication, authorization, data storage), and ambiguous or incomplete specifications
+                would fill this niche.
               </li>
               <li>
-                <strong>Automated Analysis:</strong> Tools that scan the requirements for security keywords and identify
-                potential risks.
+                <strong>Integration with existing SDLC tools:</strong> The application should integrate with existing
+                Software Development Life Cycle (SDLC) tools to provide value in the development lifecycle.
+              </li>
+              <li>
+                <strong>Compliance support:</strong> Tool can support specific compliance standards and frameworks
+                (e.g., OWASP, NIST).
               </li>
             </ul>
           </div>
 
           <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">5. Competitive Analysis & Gap Analysis</h3>
+            <h3 className="text-xl font-bold text-primary mb-3">4. Vulnerabilities in Software Requirements</h3>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong>Current Solutions are Insufficient:</strong> Existing security assessment tools are primarily
-                focused on code-level analysis and vulnerability scanning, lacking the capability to evaluate
-                requirements for potential security flaws.
+                <strong>OWASP Top Ten:</strong> The OWASP Top 10 provides a reference standard for critical web
+                application security risks. The requirements analysis tool should consider these and other common
+                vulnerabilities.
               </li>
               <li>
-                <strong>Potential Competitors:</strong> While not directly competitors, consider tools used for
-                requirements management, threat modeling, and static code analysis. Identify any overlap with security
-                requirement evaluation and gaps in functionality.
+                <strong>Input Validation:</strong> Requirements that do not adequately specify input validation can lead
+                to vulnerabilities like injection attacks (SQL injection, cross-site scripting).
+              </li>
+              <li>
+                <strong>Authentication and Authorization:</strong> Poorly defined requirements for authentication and
+                authorization can lead to unauthorized access and privilege escalation.
+              </li>
+              <li>
+                <strong>Data Storage:</strong> Requirements related to data storage, encryption, and access controls are
+                critical to security.
+              </li>
+              <li>
+                <strong>Error Handling:</strong> Poor error handling can expose sensitive information or create
+                denial-of-service vulnerabilities.
+              </li>
+              <li>
+                <strong>Incomplete or Ambiguous Requirements:</strong> Requirements that are unclear or incomplete can
+                lead to security vulnerabilities by omission or misinterpretation by developers.
               </li>
             </ul>
           </div>
 
           <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">6. Sources Used</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-              <a
-                href="https://www.verifiedmarketresearch.com/product/security-assessment-market/"
-                className="text-blue-600 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Verified Market Research: Security Assessment Market
-              </a>
-              <a
-                href="https://www.mordorintelligence.com/industry-reports/cybersecurity-risk-assessment-market"
-                className="text-blue-600 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Mordor Intelligence: Cybersecurity Risk Assessment Market
-              </a>
-              <a
-                href="https://www.sentinelone.com/cybersecurity-101/cybersecurity/cyber-security-risk-assessment-tools/"
-                className="text-blue-600 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                SentinelOne: Cyber Security Risk Assessment Tools
-              </a>
-              <a
-                href="https://www.dataguard.com/blog/best-risk-assessment-software/"
-                className="text-blue-600 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                DataGuard: Best Risk Assessment Software
-              </a>
-              <a
-                href="https://www.gartner.com/en/digital-markets/insights/stand-out-in-your-category-with-risk-managment-buyer-insights"
-                className="text-blue-600 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Gartner: Risk Management Buyer Insights
-              </a>
-              <a
-                href="https://www.blackduck.com/blog/software-security-requirements.html"
-                className="text-blue-600 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                BlackDuck: Software Security Requirements
-              </a>
-              <a
-                href="https://www.linkedin.com/pulse/lets-talk-defining-security-requirements-henrique-pereira"
-                className="text-blue-600 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn: Defining Security Requirements
-              </a>
-              <a
-                href="https://codific.com/mastering-owasp-samm-security-requirements-explained/"
-                className="text-blue-600 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Codific: OWASP SAMM Security Requirements
-              </a>
-            </div>
-            <p className="mt-4 text-sm text-gray-600">
-              Note: This is a partial list of sources. For the complete list, please refer to the original document.
+            <h3 className="text-xl font-bold text-primary mb-3">5. Conclusion</h3>
+            <p>
+              The market for security risk assessment tools is growing, with a strong emphasis on early-stage security
+              practices. There is an underserved niche for tools that evaluate software requirements for security
+              vulnerabilities. A focused application that can automatically analyze requirements documents, identify
+              potential risks, and provide recommendations for improvement would be highly valuable and address a
+              critical need in the software development lifecycle. This proactive approach can significantly improve the
+              security posture of software projects and reduce overall risk.
             </p>
           </div>
-
-          <p className="mt-8 text-lg">
-            This report provides a foundation for developing a focused application to evaluate software requirements for
-            security risks. It highlights the need for such a tool and suggests potential features and functionalities.
-          </p>
 
           <div className="mt-10 flex justify-between">
             <Link

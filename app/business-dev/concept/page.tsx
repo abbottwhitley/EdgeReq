@@ -4,111 +4,138 @@ import Link from "next/link"
 export default function ConceptPage() {
   return (
     <main>
-      <PageHeader title="Concept Development" description="The concept and value proposition for ReqSecure" />
+      <PageHeader title="Concept Development" description="The concept and value proposition for EdgeReq Analytics" />
 
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-2xl font-bold mb-6 text-center">ReqSecure</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center">Business Proposition: EdgeReq Analytics</h2>
 
           <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">Value Proposition</h3>
+            <h3 className="text-xl font-bold text-primary mb-3">1. Core Value Proposition</h3>
             <p className="mb-4">
-              ReqSecure empowers development teams to proactively identify and mitigate security risks by analyzing
-              software requirements <em>before</em> code is written. This helps prevent vulnerabilities, reduces
-              development costs associated with fixing security flaws later, and ensures compliance with security
-              standards.
+              EdgeReq Analytics is a focused application that proactively evaluates uploaded software requirements for
+              qualities that may introduce downstream security risks. It shifts security left in the SDLC by identifying
+              potential vulnerabilities early in the requirements phase, providing actionable insights and
+              recommendations to developers. EdgeReq enables organizations to build more secure software, reduce the
+              cost of remediation, and improve compliance.
             </p>
           </div>
 
           <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">Target Audience</h3>
-            <p className="mb-4">
-              Software developers, project managers, security architects, and compliance officers who are involved in
-              the software development lifecycle.
-            </p>
-          </div>
-
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">Core Functionality</h3>
+            <h3 className="text-xl font-bold text-primary mb-3">2. Key Differentiators</h3>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong>Requirements Upload:</strong> Users upload software requirements documents (e.g., in formats
-                like .docx, .pdf, or even requirements management tools' exports).
+                <strong>Proactive Requirements Analysis:</strong> Unlike tools focused solely on code scanning or
+                penetration testing, EdgeReq analyzes requirements documents (e.g., written specifications, user
+                stories) <em>before</em> code is written.
               </li>
               <li>
-                <strong>Automated Analysis:</strong> ReqSecure uses AI and rule-based engines to analyze the
-                requirements for security-related keywords, potential vulnerabilities (e.g., missing input validation,
-                authorization issues), and compliance with security best practices.
+                <strong>Automated Security Requirements Validation:</strong> EdgeReq automatically identifies potential
+                security weaknesses in requirements by analyzing natural language text, identifying ambiguities,
+                inconsistencies, and missing security controls based on predefined rules and industry best practices
+                (OWASP, NIST).
               </li>
               <li>
-                <strong>Risk Scoring and Prioritization:</strong> ReqSecure assigns a risk score to each identified
-                potential vulnerability, and prioritizes based on severity and potential impact.
+                <strong>Actionable Recommendations:</strong> EdgeReq provides clear, concise, and actionable
+                recommendations to developers, including specific suggestions for improving requirements, identifying
+                potential vulnerabilities (e.g., input validation issues, authentication gaps), and suggesting security
+                controls.
               </li>
               <li>
-                <strong>Actionable Recommendations:</strong> The application provides specific, actionable
-                recommendations for mitigating the identified risks, including suggested changes to the requirements or
-                links to relevant security best practices.
+                <strong>Integration with SDLC:</strong> EdgeReq integrates seamlessly with existing development and
+                DevOps workflows, including CI/CD pipelines, allowing for automated requirements analysis as part of the
+                software development process.
               </li>
               <li>
-                <strong>Reporting and Integration:</strong> Generates comprehensive reports that can be shared with
-                stakeholders, including security teams and compliance officers, and integrates with popular project
-                management and bug tracking systems.
+                <strong>Focus on Supply Chain Security:</strong> Analyzes requirements for dependencies on external
+                components and suggests security best practices for managing supply chain risks.
+              </li>
+              <li>
+                <strong>Compliance Support:</strong> Assists with achieving and maintaining compliance with relevant
+                regulatory standards (e.g., PCI-DSS, GDPR, HIPAA) by identifying requirements gaps and mapping
+                requirements to compliance controls.
+              </li>
+              <li>
+                <strong>Customizable Rule Sets:</strong> Allows users to customize rule sets and define specific
+                security requirements relevant to their organization and projects.
+              </li>
+              <li>
+                <strong>User-Friendly Interface:</strong> Provides a clear and intuitive interface for uploading
+                requirements, viewing analysis results, and accessing recommendations. The interface will allow
+                different views, customized by user roles.
+              </li>
+              <li>
+                <strong>Reporting and Metrics:</strong> Generates comprehensive reports and provides metrics on security
+                risk assessment, vulnerability identification, and requirements quality.
               </li>
             </ul>
           </div>
 
           <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">Key Differentiators</h3>
+            <h3 className="text-xl font-bold text-primary mb-3">3. Target Audience</h3>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>Software development teams</li>
+              <li>Security engineers and architects</li>
+              <li>Project managers</li>
+              <li>Compliance officers</li>
+              <li>Organizations in regulated industries (e.g., finance, healthcare)</li>
+              <li>Any organization aiming to improve the security of its software development process</li>
+            </ul>
+          </div>
+
+          <div className="mb-8">
+            <h3 className="text-xl font-bold text-primary mb-3">4. Features</h3>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong>Focus on Pre-Code Analysis:</strong> Unlike SAST/DAST tools that analyze code, ReqSecure focuses
-                on requirements, shifting security left in the SDLC.
+                <strong>Requirements Upload:</strong> Accepts various document formats (e.g., .docx, .pdf, .txt).
               </li>
               <li>
-                <strong>Proactive Risk Mitigation:</strong> Identifies vulnerabilities early in the development process,
-                reducing the cost and time to fix security issues.
+                <strong>Automated Analysis:</strong> Uses natural language processing (NLP) and rule-based engines to
+                analyze requirements.
               </li>
               <li>
-                <strong>AI-Powered and Rule-Based Analysis:</strong> Combines the power of AI to identify patterns and
-                anomalies with rule-based analysis for compliance and best-practice checks, offering a hybrid approach.
+                <strong>Vulnerability Identification:</strong> Detects potential security risks based on OWASP Top 10,
+                SANS Top 25, and other industry standards.
               </li>
               <li>
-                <strong>Actionable Guidance:</strong> Provides clear, specific recommendations for mitigating identified
-                risks, not just lists of vulnerabilities.
+                <strong>Risk Assessment:</strong> Provides risk scores based on severity and likelihood of occurrence.
               </li>
               <li>
-                <strong>Integration with Requirements Management Tools:</strong> Allows for seamless integration with
-                popular requirements management tools.
+                <strong>Recommendation Engine:</strong> Generates actionable suggestions for improving requirements.
+              </li>
+              <li>
+                <strong>Reporting and Visualization:</strong> Generates comprehensive reports and visualizes results.
+              </li>
+              <li>
+                <strong>Integration APIs:</strong> Provides APIs for integration with CI/CD pipelines and other
+                development tools.
+              </li>
+              <li>
+                <strong>Customizable Rules:</strong> Allows for custom rule creation and modification.
+              </li>
+              <li>
+                <strong>User Roles and Permissions:</strong> Role-based access control for different users and teams.
               </li>
             </ul>
           </div>
 
           <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">Business Model</h3>
-            <p className="mb-4">
-              Software-as-a-Service (SaaS) model with tiered pricing based on features, the number of projects, or the
-              size of the organization. Could also have an enterprise level for on-premise deployment.
-            </p>
+            <h3 className="text-xl font-bold text-primary mb-3">5. Revenue Model</h3>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>
+                Subscription-based pricing (e.g., per user, per project, or based on the number of requirements
+                analyzed)
+              </li>
+              <li>Tiered pricing based on features and usage</li>
+              <li>Potential for add-on services such as custom rule development and consulting</li>
+            </ul>
           </div>
 
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">Marketing Strategy</h3>
-            <p className="mb-4">
-              Focus on content marketing, emphasizing the cost savings and proactive security benefits of ReqSecure.
-              Target specific industries with compliance requirements, such as healthcare and finance. Leverage case
-              studies demonstrating the effectiveness of the tool.
-            </p>
-          </div>
-
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">Competitive Advantage</h3>
-            <p className="mb-4">
-              By focusing on the critical but often-overlooked phase of software requirements, ReqSecure offers a unique
-              and valuable service that proactively enhances software security and reduces development costs. It
-              addresses a clear need and pain point highlighted in the consumer feedback, setting it apart from tools
-              that focus solely on code analysis.
-            </p>
-          </div>
+          <p className="mt-8 text-lg">
+            This proposition directly addresses the identified pain points by offering a proactive, automated solution
+            for evaluating software requirements for security risks, with a strong focus on integration, clear
+            recommendations, and compliance support.
+          </p>
 
           <div className="mt-10 flex justify-between">
             <Link

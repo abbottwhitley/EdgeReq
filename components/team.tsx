@@ -10,10 +10,10 @@ export default function Team() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const roles = entry.target.querySelectorAll(".fade-up")
-            roles.forEach((role, index) => {
+            const members = entry.target.querySelectorAll(".fade-up")
+            members.forEach((member, index) => {
               setTimeout(() => {
-                role.classList.add("visible")
+                member.classList.add("visible")
               }, index * 200)
             })
             observer.unobserve(entry.target)
@@ -35,62 +35,120 @@ export default function Team() {
   }, [])
 
   return (
-    <section id="team" className="py-20 bg-white">
+    <section id="team" className="py-20">
       <div className="container mx-auto px-4">
         <div className="section-title">
           <h2>Our Team</h2>
-          <p>A lean, focused team with expertise in security, software development, and business growth.</p>
+          <p>
+            EdgeReq Analytics is built by a small but dedicated team of experts in software development, security, and
+            business development.
+          </p>
         </div>
 
-        <div ref={teamRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          <div className="team-role fade-up">
-            <div className="role-icon">
-              <i className="fas fa-user-tie"></i>
+        <div ref={teamRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+          <div className="team-member fade-up">
+            <div className="relative mb-6 rounded-xl overflow-hidden">
+              <img src="/placeholder.svg?key=a179s" alt="Founder/CEO" className="w-full h-auto" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <div className="p-4 w-full">
+                  <div className="flex justify-center space-x-3">
+                    <a href="#" className="text-white hover:text-blue-400 transition-colors">
+                      <i className="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" className="text-white hover:text-blue-400 transition-colors">
+                      <i className="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" className="text-white hover:text-blue-400 transition-colors">
+                      <i className="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 className="text-xl font-bold mb-4">CEO/Founder</h3>
-            <p className="text-gray-600">
-              Overall vision, strategy, fundraising, business development, and initial sales.
+            <h3 className="text-xl font-bold mb-1">Founder/CEO</h3>
+            <div className="text-gray-600 mb-3">Vision & Strategy</div>
+            <p className="text-sm text-gray-500">
+              Responsible for overall vision, strategy, fundraising, business development, sales, and high-level product
+              direction.
             </p>
           </div>
 
-          <div className="team-role fade-up fade-in-delay-1">
-            <div className="role-icon">
-              <i className="fas fa-laptop-code"></i>
+          <div className="team-member fade-up fade-in-delay-1">
+            <div className="relative mb-6 rounded-xl overflow-hidden">
+              <img src="/software-engineer-portrait.png" alt="Lead Developer" className="w-full h-auto" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <div className="p-4 w-full">
+                  <div className="flex justify-center space-x-3">
+                    <a href="#" className="text-white hover:text-blue-400 transition-colors">
+                      <i className="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" className="text-white hover:text-blue-400 transition-colors">
+                      <i className="fab fa-github"></i>
+                    </a>
+                    <a href="#" className="text-white hover:text-blue-400 transition-colors">
+                      <i className="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 className="text-xl font-bold mb-4">CTO/Lead Engineer</h3>
-            <p className="text-gray-600">Platform architecture, technical roadmap, development, and DevOps.</p>
+            <h3 className="text-xl font-bold mb-1">Lead Developer</h3>
+            <div className="text-gray-600 mb-3">Software Engineering</div>
+            <p className="text-sm text-gray-500">
+              Leads the development of the core EdgeReq software, architecture, and technical implementation.
+            </p>
           </div>
 
-          <div className="team-role fade-up fade-in-delay-2">
-            <div className="role-icon">
-              <i className="fas fa-shield-alt"></i>
+          <div className="team-member fade-up fade-in-delay-2">
+            <div className="relative mb-6 rounded-xl overflow-hidden">
+              <img src="/marketing-specialist-portrait.png" alt="Marketing & Sales" className="w-full h-auto" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <div className="p-4 w-full">
+                  <div className="flex justify-center space-x-3">
+                    <a href="#" className="text-white hover:text-blue-400 transition-colors">
+                      <i className="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" className="text-white hover:text-blue-400 transition-colors">
+                      <i className="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" className="text-white hover:text-blue-400 transition-colors">
+                      <i className="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 className="text-xl font-bold mb-4">Security Analyst</h3>
-            <p className="text-gray-600">Security expertise, vulnerability assessment, and threat modeling.</p>
+            <h3 className="text-xl font-bold mb-1">Marketing & Sales</h3>
+            <div className="text-gray-600 mb-3">Customer Success</div>
+            <p className="text-sm text-gray-500">
+              Implements marketing strategy, handles sales, manages customer onboarding, and provides customer support.
+            </p>
           </div>
 
-          <div className="team-role fade-up">
-            <div className="role-icon">
-              <i className="fas fa-code"></i>
+          <div className="team-member fade-up fade-in-delay-3">
+            <div className="relative mb-6 rounded-xl overflow-hidden">
+              <img src="/placeholder.svg?key=w5wqh" alt="Security Expert" className="w-full h-auto" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <div className="p-4 w-full">
+                  <div className="flex justify-center space-x-3">
+                    <a href="#" className="text-white hover:text-blue-400 transition-colors">
+                      <i className="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" className="text-white hover:text-blue-400 transition-colors">
+                      <i className="fab fa-github"></i>
+                    </a>
+                    <a href="#" className="text-white hover:text-blue-400 transition-colors">
+                      <i className="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 className="text-xl font-bold mb-4">Software Engineers</h3>
-            <p className="text-gray-600">Core platform development, integrations, and feature implementation.</p>
-          </div>
-
-          <div className="team-role fade-up fade-in-delay-1">
-            <div className="role-icon">
-              <i className="fas fa-bullhorn"></i>
-            </div>
-            <h3 className="text-xl font-bold mb-4">Marketing Manager</h3>
-            <p className="text-gray-600">Content creation, SEO, social media, lead generation, and sales.</p>
-          </div>
-
-          <div className="team-role fade-up fade-in-delay-2">
-            <div className="role-icon">
-              <i className="fas fa-headset"></i>
-            </div>
-            <h3 className="text-xl font-bold mb-4">Customer Success Manager</h3>
-            <p className="text-gray-600">Onboarding, technical support, and customer satisfaction.</p>
+            <h3 className="text-xl font-bold mb-1">Security Expert</h3>
+            <div className="text-gray-600 mb-3">Requirements Analysis</div>
+            <p className="text-sm text-gray-500">
+              Provides expert guidance on security requirements analysis and best practices (Contractor).
+            </p>
           </div>
         </div>
       </div>
