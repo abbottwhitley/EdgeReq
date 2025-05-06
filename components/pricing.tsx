@@ -65,7 +65,7 @@ const Pricing = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Simple, Transparent Pricing</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose the plan that's right for your team. All plans include a 14-day free trial.
+            Choose the plan that&apos;s right for your team. All plans include a 14-day free trial.
           </p>
         </div>
 
@@ -95,7 +95,7 @@ const Pricing = () => {
                 </Button>
 
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-gray-900">What's included:</h4>
+                  <h4 className="font-semibold text-gray-900">What&apos;s included:</h4>
                   <ul className="space-y-3">
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">

@@ -61,8 +61,8 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-4">Get in Touch</h3>
               <p className="text-gray-600 mb-6">
-                We're here to answer any questions you have about our services, pricing, or how EdgeReq Analytics can
-                help your organization.
+                We&apos;re here to answer any questions you have about our services, pricing, or how EdgeReq Analytics
+                can help your organization.
               </p>
             </div>
 
@@ -215,7 +215,7 @@ const Contact = () => {
             {submitSuccess && (
               <div className="mb-6 p-4 bg-green-50 text-green-700 rounded-md">
                 <p className="font-medium">Message sent!</p>
-                <p className="text-sm">We'll get back to you as soon as possible.</p>
+                <p className="text-sm">We&apos;ll get back to you as soon as possible.</p>
               </div>
             )}
 

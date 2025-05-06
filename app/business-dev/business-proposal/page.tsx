@@ -16,7 +16,7 @@ export default function BusinessProposal() {
         <h2 className="text-3xl font-bold mb-6">1. Executive Summary</h2>
         <p>
           EdgeReq Analytics is a SaaS solution designed to proactively evaluate software requirements for security
-          risks. This business plan outlines the company's strategy for entering and succeeding in the growing market
+          risks. This business plan outlines the company&apos;s strategy for entering and succeeding in the growing market
           for security risk assessment tools. EdgeReq addresses a critical need by analyzing software requirements
           documents to identify potential vulnerabilities before code is written, offering actionable recommendations to
           developers. The plan details market analysis, concept validation, strategic recommendations, financial
@@ -367,7 +367,7 @@ export default function BusinessProposal() {
           </li>
           <li>
             <strong>Competition:</strong> The existing market is already populated by a variety of security and
-            requirements tools. EdgeReq will need to establish it's specific value.
+            requirements tools. EdgeReq will need to establish it&apos;s specific value.
           </li>
           <li>
             <strong>Integration with SDLC:</strong> Integrating the new tool with existing processes requires
@@ -568,15 +568,15 @@ export default function BusinessProposal() {
         <h2 className="text-3xl font-bold mt-12 mb-6">References</h2>
         <ul className="list-disc pl-6 space-y-2 text-sm">
           <li>Provided context</li>
-          <li>"Software Requirements Evaluation for Security Risks - Market Research Task.md"</li>
-          <li>"Software Requirements Evaluation for Security Risks - Consumer Needs Validation Task.md"</li>
-          <li>"Software Requirements Evaluation for Security Risks - Concept Development Task.md"</li>
-          <li>"Software Requirements Evaluation for Security Risks - Seed Investment Research Task.md"</li>
-          <li>"Software Requirements Evaluation for Security Risks - Team Analysis Task.md"</li>
-          <li>"Software Requirements Evaluation for Security Risks - Revenue Analysis Task.md"</li>
-          <li>"Software Requirements Evaluation for Security Risks - Strategy Task.md"</li>
-          <li>"Software Requirements Evaluation for Security Risks - Challenge Mitigation Task.md"</li>
-          <li>"Software Requirements Evaluation for Security Risks - Success Metrics Task.md"</li>
+          <li>&quot;Software Requirements Evaluation for Security Risks - Market Research Task.md&quot</li>
+          <li>&quot;Software Requirements Evaluation for Security Risks - Consumer Needs Validation Task.md&quot</li>
+          <li>&quot;Software Requirements Evaluation for Security Risks - Concept Development Task.md&quot</li>
+          <li>&quot;Software Requirements Evaluation for Security Risks - Seed Investment Research Task.md&quot</li>
+          <li>&quot;Software Requirements Evaluation for Security Risks - Team Analysis Task.md&quot</li>
+          <li>&quot;Software Requirements Evaluation for Security Risks - Revenue Analysis Task.md&quot</li>
+          <li>&quot;Software Requirements Evaluation for Security Risks - Strategy Task.md&quot</li>
+          <li>&quot;Software Requirements Evaluation for Security Risks - Challenge Mitigation Task.md&quot</li>
+          <li>&quot;Software Requirements Evaluation for Security Risks - Success Metrics Task.md&quot</li>
           <li>Various industry resources and market research reports</li>
         </ul>
       </div>

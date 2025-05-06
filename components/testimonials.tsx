@@ -8,7 +8,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       quote:
-        "EdgeReq Analytics has transformed how we approach security in our development process. By identifying potential vulnerabilities at the requirements stage, we've reduced security-related rework by over 60%.",
+        "EdgeReq Analytics has transformed how we approach security in our development process. By identifying potential vulnerabilities at the requirements stage, we&apos;ve reduced security-related rework by over 60%.",
       author: "Sarah Chen",
       title: "CTO",
       company: "FinTech Innovations",
@@ -67,7 +67,7 @@ const Testimonials = () => {
               <Quote size={48} />
             </div>
             <div className="relative z-10">
-              <p className="text-xl text-gray-700 italic mb-8 pl-6">"{testimonials[currentIndex].quote}"</p>
+              <p className="text-xl text-gray-700 italic mb-8 pl-6">&quot;{testimonials[currentIndex].quote}&quot;</p>
               <div className="flex items-center">
                 <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
                   <img
@@ -114,7 +114,7 @@ const Testimonials = () => {
                 <div className="text-primary/20 mb-2">
                   <Quote size={32} />
                 </div>
-                <p className="text-gray-700 italic mb-4">"{testimonial.quote}"</p>
+                <p className="text-gray-700 italic mb-4">&quot;{testimonial.quote}&quot;</p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 rounded-full overflow-hidden mr-3">
                     <img
