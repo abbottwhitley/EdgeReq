@@ -52,7 +52,7 @@ const Contact = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Have questions about EdgeReq Analytics? Get in touch with our team and we'll be happy to help.
+            Have questions about EdgeReq Analytics? Get in touch with our team and we&apos;ll be happy to help.
           </p>
         </div>
 

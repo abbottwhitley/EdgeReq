@@ -441,6 +441,7 @@ export default function SuccessMetricsPage() {
           track progress, identify areas for improvement, and make data-driven decisions. These metrics will also
           provide transparency for investors and stakeholders, demonstrating the company's growth and potential.
         </p>
+        <p>This metric helps us understand if we&apos;re effectively addressing customer needs and delivering value.</p>
       </div>
     </div>
   )

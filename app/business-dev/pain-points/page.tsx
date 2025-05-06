@@ -77,8 +77,8 @@ export default function PainPointsPage() {
           misunderstood or improperly implemented. Security becomes viewed as a hindrance rather than an enabler.
         </p>
         <p>
-          <strong>Customer Quote:</strong> "Our developers see security as a roadblock that slows them down, not as an
-          essential part of building good software."
+          <strong>Customer Quote:</strong> &quot;Our developers see security as a roadblock that slows them down, not as
+          an essential part of building good software.&quot;
         </p>
 
         <h3>5. Compliance Complexity</h3>
@@ -91,8 +91,8 @@ export default function PainPointsPage() {
           specialized expertise. Organizations risk non-compliance penalties and reputation damage.
         </p>
         <p>
-          <strong>Customer Quote:</strong> "We spend weeks mapping our requirements to different compliance frameworks
-          for each new project."
+          <strong>Customer Quote:</strong> &quot;We spend weeks mapping our requirements to different compliance
+          frameworks for each new project.&quot;
         </p>
 
         <h3>6. Lack of Actionable Security Guidance</h3>
@@ -105,8 +105,8 @@ export default function PainPointsPage() {
           fixes or unnecessary rework. This creates frustration and delays.
         </p>
         <p>
-          <strong>Customer Quote:</strong> "Security reviews often result in feedback like 'this isn't secure enough'
-          without explaining what specifically needs to change."
+          <strong>Customer Quote:</strong> &quot;Security reviews often result in feedback like &apos;this isn&apos;t
+          secure enough&apos; without explaining what specifically needs to change.&quot;
         </p>
 
         <h3>7. Difficulty Measuring Security ROI</h3>
@@ -119,8 +119,8 @@ export default function PainPointsPage() {
           difficult to measure. This leads to reactive rather than proactive security approaches.
         </p>
         <p>
-          <strong>Customer Quote:</strong> "It's hard to justify investment in security tools when we can't clearly show
-          the executive team how much money they're saving us."
+          <strong>Customer Quote:</strong> &quot;It&apos;s hard to justify investment in security tools when we
+          can&apos;t clearly show the executive team how much money they&apos;re saving us.&quot;
         </p>
 
         <h2>How EdgeReq Analytics Addresses These Pain Points</h2>
@@ -137,8 +137,8 @@ export default function PainPointsPage() {
               <tr>
                 <td className="py-3 px-4 border-b">Lack of Early Security Integration</td>
                 <td className="py-3 px-4 border-b">
-                  Provides automated security analysis at the requirements stage, enabling "shift-left" security
-                  practices.
+                  Provides automated security analysis at the requirements stage, enabling &quot;shift-left&quot;
+                  security practices.
                 </td>
               </tr>
               <tr>
