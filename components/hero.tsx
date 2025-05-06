@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 
 const Hero = () => {
   return (
-    <section className="relative py-20 overflow-hidden bg-white">
+    <section className="relative pt-32 pb-20 overflow-hidden bg-white">
       <div className="container relative z-10 px-4 mx-auto">
         <div className="flex flex-col items-center lg:flex-row lg:justify-between">
           <div className="w-full lg:w-1/2 mb-12 lg:mb-0">
