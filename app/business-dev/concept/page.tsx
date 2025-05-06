@@ -18,7 +18,7 @@ export default function ConceptDevelopmentPage() {
         <h2>Product Concept Overview</h2>
         <p>
           EdgeReq Analytics is a SaaS solution designed to proactively evaluate software requirements for security
-          risks. The concept was developed in response to the growing need for "shift-left" security practices that
+          risks. The concept was developed in response to the growing need for &quot;shift-left&quot; security practices that
           identify vulnerabilities earlier in the software development lifecycle.
         </p>
 

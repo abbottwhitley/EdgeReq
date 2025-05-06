@@ -33,8 +33,8 @@ export default function PainPointsPage() {
           higher than addressing it at the requirements stage.
         </p>
         <p>
-          <strong>Customer Quote:</strong> "We spend weeks reworking features because security requirements weren't
-          considered until after development was nearly complete."
+          <strong>Customer Quote:</strong> &quot;We spend weeks reworking features because security requirements
+          weren&apos;t considered until after development was nearly complete.&quot;
         </p>
 
         <h3>2. Manual and Inconsistent Security Analysis</h3>
@@ -48,8 +48,8 @@ export default function PainPointsPage() {
           standards across projects.
         </p>
         <p>
-          <strong>Customer Quote:</strong> "Our security review process varies widely depending on which security
-          analyst is assigned to the project."
+          <strong>Customer Quote:</strong> &quot;Our security review process varies widely depending on which security
+          analyst is assigned to the project.&quot;
         </p>
 
         <h3>3. Security Expertise Shortage</h3>
@@ -63,8 +63,8 @@ export default function PainPointsPage() {
           review due to resource constraints.
         </p>
         <p>
-          <strong>Customer Quote:</strong> "We have one security architect for over 20 development teams. It's
-          impossible for them to review everything thoroughly."
+          <strong>Customer Quote:</strong> &quot;We have one security architect for over 20 development teams. It&apos;s
+          impossible for them to review everything thoroughly.&quot;
         </p>
 
         <h3>4. Disconnect Between Development and Security Teams</h3>
