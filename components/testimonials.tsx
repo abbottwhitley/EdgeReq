@@ -56,7 +56,7 @@ const Testimonials = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">What Our Customers Say</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what teams using EdgeReq Analytics have to say.
+            Don&apos;t just take our word for it. Here&apos;s what teams using EdgeReq Analytics have to say.
           </p>
         </div>
 

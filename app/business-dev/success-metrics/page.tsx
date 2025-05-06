@@ -439,7 +439,7 @@ export default function SuccessMetricsPage() {
         <p>
           By establishing clear success metrics and a structured reporting process, EdgeReq Analytics will be able to
           track progress, identify areas for improvement, and make data-driven decisions. These metrics will also
-          provide transparency for investors and stakeholders, demonstrating the company's growth and potential.
+          provide transparency for investors and stakeholders, demonstrating the company&apos;s growth and potential.
         </p>
         <p>This metric helps us understand if we&apos;re effectively addressing customer needs and delivering value.</p>
       </div>
