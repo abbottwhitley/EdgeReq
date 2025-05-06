@@ -1,172 +1,121 @@
+import type { Metadata } from "next"
 import PageHeader from "@/components/business-dev/page-header"
-import Link from "next/link"
 
-export default function ConceptPage() {
+export const metadata: Metadata = {
+  title: "Concept Development | EdgeReq Analytics",
+  description: "Development of the EdgeReq Analytics concept and core features",
+}
+
+export default function ConceptDevelopmentPage() {
   return (
-    <main>
-      <PageHeader title="Concept Development" description="The concept and value proposition for EdgeReq Analytics" />
+    <div>
+      <PageHeader
+        title="Concept Development"
+        description="Development of the EdgeReq Analytics concept and core features"
+      />
 
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-2xl font-bold mb-6 text-center">Business Proposition: EdgeReq Analytics</h2>
+      <div className="prose prose-lg max-w-none mt-8">
+        <h2>Product Concept Overview</h2>
+        <p>
+          EdgeReq Analytics is a SaaS solution designed to proactively evaluate software requirements for security
+          risks. The concept was developed in response to the growing need for "shift-left" security practices that
+          identify vulnerabilities earlier in the software development lifecycle.
+        </p>
 
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">1. Core Value Proposition</h3>
-            <p className="mb-4">
-              EdgeReq Analytics is a focused application that proactively evaluates uploaded software requirements for
-              qualities that may introduce downstream security risks. It shifts security left in the SDLC by identifying
-              potential vulnerabilities early in the requirements phase, providing actionable insights and
-              recommendations to developers. EdgeReq enables organizations to build more secure software, reduce the
-              cost of remediation, and improve compliance.
-            </p>
-          </div>
+        <h2>Core Value Proposition</h2>
+        <p>
+          EdgeReq Analytics enables organizations to identify and address security vulnerabilities at the requirements
+          stage, before a single line of code is written. This proactive approach results in:
+        </p>
+        <ul>
+          <li>Reduced development costs by preventing security flaws early</li>
+          <li>Faster time-to-market with secure products</li>
+          <li>Improved compliance with security standards and regulations</li>
+          <li>Enhanced overall security posture</li>
+        </ul>
 
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">2. Key Differentiators</h3>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>
-                <strong>Proactive Requirements Analysis:</strong> Unlike tools focused solely on code scanning or
-                penetration testing, EdgeReq analyzes requirements documents (e.g., written specifications, user
-                stories) <em>before</em> code is written.
-              </li>
-              <li>
-                <strong>Automated Security Requirements Validation:</strong> EdgeReq automatically identifies potential
-                security weaknesses in requirements by analyzing natural language text, identifying ambiguities,
-                inconsistencies, and missing security controls based on predefined rules and industry best practices
-                (OWASP, NIST).
-              </li>
-              <li>
-                <strong>Actionable Recommendations:</strong> EdgeReq provides clear, concise, and actionable
-                recommendations to developers, including specific suggestions for improving requirements, identifying
-                potential vulnerabilities (e.g., input validation issues, authentication gaps), and suggesting security
-                controls.
-              </li>
-              <li>
-                <strong>Integration with SDLC:</strong> EdgeReq integrates seamlessly with existing development and
-                DevOps workflows, including CI/CD pipelines, allowing for automated requirements analysis as part of the
-                software development process.
-              </li>
-              <li>
-                <strong>Focus on Supply Chain Security:</strong> Analyzes requirements for dependencies on external
-                components and suggests security best practices for managing supply chain risks.
-              </li>
-              <li>
-                <strong>Compliance Support:</strong> Assists with achieving and maintaining compliance with relevant
-                regulatory standards (e.g., PCI-DSS, GDPR, HIPAA) by identifying requirements gaps and mapping
-                requirements to compliance controls.
-              </li>
-              <li>
-                <strong>Customizable Rule Sets:</strong> Allows users to customize rule sets and define specific
-                security requirements relevant to their organization and projects.
-              </li>
-              <li>
-                <strong>User-Friendly Interface:</strong> Provides a clear and intuitive interface for uploading
-                requirements, viewing analysis results, and accessing recommendations. The interface will allow
-                different views, customized by user roles.
-              </li>
-              <li>
-                <strong>Reporting and Metrics:</strong> Generates comprehensive reports and provides metrics on security
-                risk assessment, vulnerability identification, and requirements quality.
-              </li>
-            </ul>
-          </div>
+        <h2>Key Product Features</h2>
+        <h3>1. Automated Requirements Analysis</h3>
+        <p>
+          EdgeReq Analytics uses advanced algorithms and rule sets to automatically analyze software requirements
+          documents for potential security vulnerabilities. The system can process various document formats and extract
+          relevant requirements for analysis.
+        </p>
 
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">3. Target Audience</h3>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>Software development teams</li>
-              <li>Security engineers and architects</li>
-              <li>Project managers</li>
-              <li>Compliance officers</li>
-              <li>Organizations in regulated industries (e.g., finance, healthcare)</li>
-              <li>Any organization aiming to improve the security of its software development process</li>
-            </ul>
-          </div>
+        <h3>2. Security Risk Identification</h3>
+        <p>
+          The platform identifies potential security risks based on industry best practices, common vulnerability
+          patterns, and compliance requirements. Each identified risk is categorized by severity and potential impact.
+        </p>
 
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">4. Features</h3>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>
-                <strong>Requirements Upload:</strong> Accepts various document formats (e.g., .docx, .pdf, .txt).
-              </li>
-              <li>
-                <strong>Automated Analysis:</strong> Uses natural language processing (NLP) and rule-based engines to
-                analyze requirements.
-              </li>
-              <li>
-                <strong>Vulnerability Identification:</strong> Detects potential security risks based on OWASP Top 10,
-                SANS Top 25, and other industry standards.
-              </li>
-              <li>
-                <strong>Risk Assessment:</strong> Provides risk scores based on severity and likelihood of occurrence.
-              </li>
-              <li>
-                <strong>Recommendation Engine:</strong> Generates actionable suggestions for improving requirements.
-              </li>
-              <li>
-                <strong>Reporting and Visualization:</strong> Generates comprehensive reports and visualizes results.
-              </li>
-              <li>
-                <strong>Integration APIs:</strong> Provides APIs for integration with CI/CD pipelines and other
-                development tools.
-              </li>
-              <li>
-                <strong>Customizable Rules:</strong> Allows for custom rule creation and modification.
-              </li>
-              <li>
-                <strong>User Roles and Permissions:</strong> Role-based access control for different users and teams.
-              </li>
-            </ul>
-          </div>
+        <h3>3. Actionable Recommendations</h3>
+        <p>
+          For each identified risk, EdgeReq Analytics provides clear, actionable recommendations to address the
+          vulnerability. These recommendations are tailored to the specific context and include examples and references
+          to security best practices.
+        </p>
 
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">5. Revenue Model</h3>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>
-                Subscription-based pricing (e.g., per user, per project, or based on the number of requirements
-                analyzed)
-              </li>
-              <li>Tiered pricing based on features and usage</li>
-              <li>Potential for add-on services such as custom rule development and consulting</li>
-            </ul>
-          </div>
+        <h3>4. Compliance Mapping</h3>
+        <p>
+          The platform maps requirements to relevant compliance standards and frameworks, helping organizations ensure
+          regulatory adherence from the earliest stages of development.
+        </p>
 
-          <p className="mt-8 text-lg">
-            This proposition directly addresses the identified pain points by offering a proactive, automated solution
-            for evaluating software requirements for security risks, with a strong focus on integration, clear
-            recommendations, and compliance support.
-          </p>
+        <h3>5. Integration Capabilities</h3>
+        <p>
+          EdgeReq Analytics integrates with popular development tools and platforms, allowing for seamless incorporation
+          into existing workflows. This includes integrations with requirements management tools, issue tracking
+          systems, and CI/CD pipelines.
+        </p>
 
-          <div className="mt-10 flex justify-between">
-            <Link
-              href="/business-dev/market-research"
-              className="inline-flex items-center px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition-colors"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              Previous: Market Research
-            </Link>
-            <Link
-              href="/business-dev/needs-validation"
-              className="inline-flex items-center px-4 py-2 bg-primary text-white rounded hover:bg-secondary transition-colors"
-            >
-              Next: Consumer Needs Validation
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </Link>
-          </div>
-        </div>
+        <h3>6. Reporting and Analytics</h3>
+        <p>
+          Comprehensive reporting provides insights into security risk trends, compliance status, and remediation
+          progress. These reports can be customized and shared with stakeholders to demonstrate security posture and
+          improvement over time.
+        </p>
+
+        <h2>User Experience Design</h2>
+        <p>
+          The EdgeReq Analytics user experience is designed to be intuitive and accessible for both security experts and
+          development teams. Key aspects of the UX include:
+        </p>
+        <ul>
+          <li>Clean, modern interface with clear navigation</li>
+          <li>Visual representations of security risks and their relationships</li>
+          <li>Contextual help and guidance throughout the platform</li>
+          <li>Customizable dashboards for different user roles</li>
+          <li>Collaborative features for team-based review and remediation</li>
+        </ul>
+
+        <h2>Technology Stack</h2>
+        <p>EdgeReq Analytics is built on a modern, scalable technology stack that includes:</p>
+        <ul>
+          <li>Cloud-native architecture for scalability and reliability</li>
+          <li>Natural language processing for requirements analysis</li>
+          <li>Machine learning algorithms for risk identification and classification</li>
+          <li>RESTful APIs for integration with other systems</li>
+          <li>Secure data storage and processing</li>
+        </ul>
+
+        <h2>Concept Validation</h2>
+        <p>The EdgeReq Analytics concept has been validated through:</p>
+        <ul>
+          <li>Interviews with potential customers across various industries</li>
+          <li>Analysis of existing security tools and their limitations</li>
+          <li>Review of industry reports and research on security vulnerabilities</li>
+          <li>Feedback from security experts and development teams</li>
+        </ul>
+
+        <h2>Next Steps</h2>
+        <p>With the concept fully developed, the next steps include:</p>
+        <ul>
+          <li>Development of a minimum viable product (MVP)</li>
+          <li>Beta testing with early adopters</li>
+          <li>Refinement based on user feedback</li>
+          <li>Full market launch</li>
+        </ul>
       </div>
-    </main>
+    </div>
   )
 }

@@ -1,161 +1,89 @@
-"use client"
-
-import { useEffect, useRef } from "react"
-
-export default function Challenges() {
-  const challengesRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const items = entry.target.querySelectorAll(".fade-up")
-            items.forEach((item, index) => {
-              setTimeout(() => {
-                item.classList.add("visible")
-              }, index * 200)
-            })
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      { threshold: 0.1 },
-    )
-
-    if (challengesRef.current) {
-      observer.observe(challengesRef.current)
-    }
-
-    return () => {
-      if (challengesRef.current) {
-        observer.unobserve(challengesRef.current)
-      }
-    }
-  }, [])
+const Challenges = () => {
+  const marketChallenges = [
+    {
+      title: "Lack of Awareness and Understanding",
+      description:
+        "Many organizations and developers lack awareness of the importance of incorporating security early in the SDLC.",
+      solution: "Education and awareness campaigns to raise understanding of early security integration.",
+    },
+    {
+      title: "Complexity of Security Requirements",
+      description: "Defining and managing comprehensive security requirements can be complex and overwhelming.",
+      solution: "Simplified security requirements frameworks and pre-built templates based on industry best practices.",
+    },
+    {
+      title: "Integration with Existing Development Processes",
+      description: "Integrating security tools into existing SDLCs can be challenging and disruptive.",
+      solution: "Seamless integration with popular development tools and workflows to minimize disruption.",
+    },
+    {
+      title: "Manual and Time-Consuming Evaluation",
+      description: "Manual evaluation methods are time-consuming and error-prone.",
+      solution: "Automation of the requirements evaluation process to save time and improve accuracy.",
+    },
+    {
+      title: "Skill Gap and Expertise Shortage",
+      description:
+        "A shortage of skilled security professionals makes it difficult to implement proper security measures.",
+      solution: "Knowledge base and expert guidance to supplement existing skills and expertise.",
+    },
+    {
+      title: "Cost and Affordability",
+      description: "Existing security tools can be expensive, especially for smaller organizations.",
+      solution: "Affordable and scalable SaaS model with flexible pricing options.",
+    },
+    {
+      title: "Evolving Threat Landscape",
+      description: "The ever-changing threat landscape requires constant adaptation and updates.",
+      solution: "Continuous threat intelligence integration to stay current with emerging threats.",
+    },
+  ]
 
   return (
-    <section id="challenges" className="py-20 bg-gray-50">
+    <section id="challenges" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="section-title">
-          <h2>Industry Challenges & Our Solutions</h2>
-          <p>
-            The software industry faces significant challenges in implementing security early in the development
-            lifecycle. EdgeReq Analytics provides targeted solutions to these challenges.
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4">Market Challenges & Our Solutions</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            EdgeReq Analytics addresses key challenges in the software security market with innovative solutions
+            designed to make security accessible and effective.
           </p>
         </div>
 
-        <div ref={challengesRef} className="mt-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-md fade-up">
-              <h3 className="text-xl font-bold mb-4 text-red-600">
-                <i className="fas fa-exclamation-circle mr-2"></i>Challenges
-              </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <i className="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
-                  <div>
-                    <span className="font-semibold">Lack of Awareness</span>
-                    <p className="text-gray-600 text-sm">
-                      Many organizations lack awareness of the importance of incorporating security early in the SDLC.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <i className="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
-                  <div>
-                    <span className="font-semibold">Complexity of Security Requirements</span>
-                    <p className="text-gray-600 text-sm">
-                      Defining and managing comprehensive security requirements can be complex and overwhelming.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <i className="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
-                  <div>
-                    <span className="font-semibold">Integration Difficulties</span>
-                    <p className="text-gray-600 text-sm">
-                      Integrating security tools into existing development processes can be challenging.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <i className="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
-                  <div>
-                    <span className="font-semibold">Manual Evaluation</span>
-                    <p className="text-gray-600 text-sm">
-                      Manual security evaluation methods are time-consuming and error-prone.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <i className="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
-                  <div>
-                    <span className="font-semibold">Skill Gap</span>
-                    <p className="text-gray-600 text-sm">
-                      A shortage of skilled security professionals makes it difficult to implement security best
-                      practices.
-                    </p>
-                  </div>
-                </li>
-              </ul>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {marketChallenges.map((challenge, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
+            >
+              <div className="p-6">
+                <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="h-6 w-6 text-blue-600"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-2">{challenge.title}</h3>
+                <p className="text-gray-600 mb-4">{challenge.description}</p>
+                <div className="border-t border-gray-200 pt-4 mt-auto">
+                  <h4 className="font-semibold text-blue-600 mb-2">Our Solution:</h4>
+                  <p className="text-gray-700">{challenge.solution}</p>
+                </div>
+              </div>
             </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-md fade-up fade-in-delay-1">
-              <h3 className="text-xl font-bold mb-4 text-green-600">
-                <i className="fas fa-check-circle mr-2"></i>Our Solutions
-              </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <i className="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                  <div>
-                    <span className="font-semibold">Education & Awareness</span>
-                    <p className="text-gray-600 text-sm">
-                      We provide educational content and resources to raise awareness about security requirements.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <i className="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                  <div>
-                    <span className="font-semibold">Simplified Security Frameworks</span>
-                    <p className="text-gray-600 text-sm">
-                      Pre-built templates and frameworks based on industry best practices make security accessible.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <i className="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                  <div>
-                    <span className="font-semibold">Seamless SDLC Integration</span>
-                    <p className="text-gray-600 text-sm">
-                      Our platform integrates with popular development tools to fit into your existing workflow.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <i className="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                  <div>
-                    <span className="font-semibold">Automation & Efficiency</span>
-                    <p className="text-gray-600 text-sm">
-                      We automate the requirements evaluation process to save time and reduce errors.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <i className="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                  <div>
-                    <span className="font-semibold">Knowledge Base & Expert Guidance</span>
-                    <p className="text-gray-600 text-sm">
-                      Our platform provides a knowledge base and expert guidance to bridge the skill gap.
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
   )
 }
+
+export default Challenges

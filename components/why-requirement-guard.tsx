@@ -1,96 +1,42 @@
-"use client"
-
-import { useEffect, useRef } from "react"
-
-export default function WhyRequirementGuard() {
-  const statsRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const stats = entry.target.querySelectorAll(".fade-up")
-            stats.forEach((stat, index) => {
-              setTimeout(() => {
-                stat.classList.add("visible")
-              }, index * 200)
-            })
-
-            // Animate counters
-            const statElements = entry.target.querySelectorAll(".stat")
-            statElements.forEach((stat) => {
-              const target = Number.parseInt(stat.textContent || "0", 10)
-              animateCounter(stat as HTMLElement, 0, target, 2000)
-            })
-
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      { threshold: 0.2 },
-    )
-
-    if (statsRef.current) {
-      observer.observe(statsRef.current)
-    }
-
-    return () => {
-      if (statsRef.current) {
-        observer.unobserve(statsRef.current)
-      }
-    }
-  }, [])
-
-  const animateCounter = (element: HTMLElement, start: number, end: number, duration: number) => {
-    let startTimestamp: number | null = null
-
-    const step = (timestamp: number) => {
-      if (!startTimestamp) startTimestamp = timestamp
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1)
-      const value = Math.floor(progress * (end - start) + start)
-      element.textContent = `${value}%`
-
-      if (progress < 1) {
-        window.requestAnimationFrame(step)
-      }
-    }
-
-    window.requestAnimationFrame(step)
-  }
-
+const WhyRequirementGuard = () => {
   return (
-    <section id="why" className="problem">
+    <section className="py-12 bg-blue-50">
       <div className="container mx-auto px-4">
-        <div className="section-title">
-          <h2>The Security Challenge</h2>
-          <p>
-            Security vulnerabilities are often discovered too late in the development process, leading to costly fixes.
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-4">Why EdgeReq Analytics?</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover how our proactive approach to security requirements can transform your software development
+            lifecycle.
           </p>
         </div>
 
-        <div ref={statsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-          <div className="stat-card fade-up">
-            <div className="stat">86</div>
-            <div className="stat-label">of developers don't view application security as a top priority</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold mb-2 text-blue-600">Proactive Security</h3>
+            <p className="text-gray-600">
+              Identify and address security vulnerabilities early in the development process, reducing the risk of
+              costly rework.
+            </p>
           </div>
 
-          <div className="stat-card fade-up fade-in-delay-1">
-            <div className="stat">72</div>
-            <div className="stat-label">of security issues are discovered after code is written</div>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold mb-2 text-blue-600">Cost Savings</h3>
+            <p className="text-gray-600">
+              Reduce development costs by preventing security flaws before they become embedded in your codebase.
+            </p>
           </div>
 
-          <div className="stat-card fade-up fade-in-delay-2">
-            <div className="stat">30</div>
-            <div className="stat-label">times more expensive to fix security issues in production</div>
-          </div>
-
-          <div className="stat-card fade-up fade-in-delay-3">
-            <div className="stat">62</div>
-            <div className="stat-label">of companies struggle with defining security requirements</div>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold mb-2 text-blue-600">Compliance Ready</h3>
+            <p className="text-gray-600">
+              Ensure your software meets industry regulations and compliance standards with automated security
+              validation.
+            </p>
           </div>
         </div>
       </div>
     </section>
   )
 }
+
+export default WhyRequirementGuard

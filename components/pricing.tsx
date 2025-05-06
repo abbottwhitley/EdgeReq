@@ -1,154 +1,149 @@
-"use client"
+import { Check } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
-import { useEffect, useRef } from "react"
-
-export default function Pricing() {
-  const pricingRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const items = entry.target.querySelectorAll(".fade-up")
-            items.forEach((item, index) => {
-              setTimeout(() => {
-                item.classList.add("visible")
-              }, index * 200)
-            })
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      { threshold: 0.1 },
-    )
-
-    if (pricingRef.current) {
-      observer.observe(pricingRef.current)
-    }
-
-    return () => {
-      if (pricingRef.current) {
-        observer.unobserve(pricingRef.current)
-      }
-    }
-  }, [])
+const Pricing = () => {
+  const pricingTiers = [
+    {
+      name: "Basic",
+      price: "$99",
+      description: "Perfect for startups and small teams getting started with security requirements.",
+      features: [
+        "Basic requirements analysis",
+        "Up to 5 projects",
+        "100 requirements per month",
+        "Standard security rules",
+        "Email support",
+        "Basic reporting",
+        "Community access",
+      ],
+      cta: "Get Started",
+      popular: false,
+    },
+    {
+      name: "Pro",
+      price: "$299",
+      description: "Ideal for growing teams that need more advanced features and analysis capabilities.",
+      features: [
+        "Advanced requirements analysis",
+        "Up to 15 projects",
+        "500 requirements per month",
+        "Extended security rule set",
+        "Priority email support",
+        "Advanced reporting & analytics",
+        "API access",
+        "SDLC integration",
+        "Compliance mapping",
+      ],
+      cta: "Try Pro",
+      popular: true,
+    },
+    {
+      name: "Enterprise",
+      price: "$799",
+      description: "For organizations that need unlimited analysis, custom rules, and dedicated support.",
+      features: [
+        "Unlimited requirements analysis",
+        "Unlimited projects",
+        "Custom rule development",
+        "Dedicated support",
+        "Unlimited users",
+        "Custom integrations",
+        "Advanced compliance mapping",
+        "Audit trail",
+        "SSO authentication",
+        "SLA guarantees",
+        "Dedicated account manager",
+      ],
+      cta: "Contact Sales",
+      popular: false,
+    },
+  ]
 
   return (
-    <section id="pricing" className="py-20 bg-white">
+    <section id="pricing" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="section-title">
-          <h2>Pricing Plans</h2>
-          <p>Choose the plan that best fits your organization's needs and scale as you grow.</p>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4">Simple, Transparent Pricing</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Choose the plan that's right for your team. All plans include a 14-day free trial.
+          </p>
         </div>
 
-        <div ref={pricingRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-          <div className="pricing-card bg-white rounded-xl shadow-md p-8 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg fade-up">
-            <div className="pricing-tier text-lg font-bold text-primary mb-2">Basic</div>
-            <div className="pricing-price text-4xl font-bold mb-4">$99</div>
-            <div className="pricing-period text-gray-500 mb-6">per month</div>
-            <ul className="pricing-features text-left mb-8">
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Limited features</span>
-              </li>
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Basic requirements analysis</span>
-              </li>
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Standard rule set</span>
-              </li>
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Email support</span>
-              </li>
-            </ul>
-            <a
-              href="#contact"
-              className="block w-full py-3 px-6 bg-primary hover:bg-secondary text-white rounded-full font-semibold transition-colors duration-300"
+        <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
+          {pricingTiers.map((tier, index) => (
+            <div
+              key={index}
+              className={`flex-1 bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl ${
+                tier.popular ? "border-2 border-primary lg:-mt-4 lg:mb-4" : "border border-gray-200"
+              }`}
             >
-              Get Started
-            </a>
-          </div>
+              {tier.popular && <div className="bg-primary text-white text-center py-2 font-medium">Most Popular</div>}
 
-          <div className="pricing-card bg-white rounded-xl shadow-md p-8 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg border-2 border-primary fade-up fade-in-delay-1">
-            <div className="pricing-tier text-lg font-bold text-primary mb-2">Pro</div>
-            <div className="pricing-price text-4xl font-bold mb-4">$299</div>
-            <div className="pricing-period text-gray-500 mb-6">per month</div>
-            <div className="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
-              POPULAR
+              <div className="p-8">
+                <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
+                <div className="flex items-baseline mb-4">
+                  <span className="text-4xl font-extrabold">{tier.price}</span>
+                  <span className="text-gray-500 ml-1">/month</span>
+                </div>
+                <p className="text-gray-600 mb-6">{tier.description}</p>
+
+                <Button
+                  className={`w-full mb-8 ${tier.popular ? "" : "bg-gray-800 hover:bg-gray-700"}`}
+                  variant={tier.popular ? "default" : "outline"}
+                >
+                  {tier.cta}
+                </Button>
+
+                <div className="space-y-4">
+                  <h4 className="font-semibold text-gray-900">What's included:</h4>
+                  <ul className="space-y-3">
+                    {tier.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start">
+                        <Check className="h-5 w-5 text-primary shrink-0 mr-2" />
+                        <span className="text-gray-600">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
-            <ul className="pricing-features text-left mb-8">
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Full feature set</span>
-              </li>
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Advanced requirements analysis</span>
-              </li>
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>More projects/requirements analyzed</span>
-              </li>
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Standard support</span>
-              </li>
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Integration with popular tools</span>
-              </li>
-            </ul>
-            <a
-              href="#contact"
-              className="block w-full py-3 px-6 bg-primary hover:bg-secondary text-white rounded-full font-semibold transition-colors duration-300"
-            >
-              Get Started
-            </a>
-          </div>
+          ))}
+        </div>
 
-          <div className="pricing-card bg-white rounded-xl shadow-md p-8 text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg fade-up fade-in-delay-2">
-            <div className="pricing-tier text-lg font-bold text-primary mb-2">Enterprise</div>
-            <div className="pricing-price text-4xl font-bold mb-4">$799</div>
-            <div className="pricing-period text-gray-500 mb-6">per month</div>
-            <ul className="pricing-features text-left mb-8">
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Custom rule development</span>
-              </li>
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Dedicated support</span>
-              </li>
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Unlimited users</span>
-              </li>
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Unlimited requirements analysis</span>
-              </li>
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Advanced integrations</span>
-              </li>
-              <li className="mb-2 flex items-start">
-                <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                <span>Custom SLAs</span>
-              </li>
-            </ul>
-            <a
-              href="#contact"
-              className="block w-full py-3 px-6 bg-gray-800 hover:bg-gray-700 text-white rounded-full font-semibold transition-colors duration-300"
-            >
-              Contact Sales
-            </a>
+        <div className="mt-12 text-center">
+          <p className="text-gray-600 mb-4">Need a custom plan? Contact our sales team for a tailored solution.</p>
+          <Button variant="outline" className="mx-auto">
+            Contact Sales
+          </Button>
+        </div>
+
+        <div className="mt-16 bg-white p-8 rounded-lg shadow-sm max-w-3xl mx-auto">
+          <h3 className="text-xl font-bold mb-4">Frequently Asked Questions</h3>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-2">Do you offer annual billing?</h4>
+              <p className="text-gray-600">
+                Yes, we offer annual billing with a 15% discount compared to monthly billing.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-2">Can I upgrade or downgrade my plan?</h4>
+              <p className="text-gray-600">
+                Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing
+                cycle.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-2">What payment methods do you accept?</h4>
+              <p className="text-gray-600">
+                We accept all major credit cards, PayPal, and bank transfers for Enterprise plans.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
   )
 }
+
+export default Pricing

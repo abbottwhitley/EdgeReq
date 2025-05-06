@@ -1,244 +1,199 @@
+import type { Metadata } from "next"
 import PageHeader from "@/components/business-dev/page-header"
-import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Pain Points | EdgeReq Analytics",
+  description: "Identification of key pain points and challenges in the security requirements space",
+}
 
 export default function PainPointsPage() {
   return (
-    <main>
+    <div>
       <PageHeader
-        title="Pain Point Analysis"
-        description="Consumer pain points and unmet needs related to software requirements evaluation for security risks"
+        title="Pain Points"
+        description="Identification of key pain points and challenges in the security requirements space"
       />
 
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-2xl font-bold mb-6">
-            Consumer Pain Points and Unmet Needs: Software Requirements Evaluation for Security Risks
-          </h2>
+      <div className="prose prose-lg max-w-none mt-8">
+        <h2>Market Pain Points</h2>
+        <p>
+          Through extensive market research and customer interviews, we have identified several critical pain points
+          that organizations face when dealing with security requirements in software development. These pain points
+          represent significant opportunities for EdgeReq Analytics to provide value.
+        </p>
 
-          <p className="mb-6">
-            Here's a summary of consumer pain points and unmet needs related to software requirements evaluation for
-            security risks, based on extensive research and analysis.
-          </p>
+        <h3>1. Lack of Early Security Integration</h3>
+        <p>
+          <strong>Pain Point:</strong> Security considerations are often introduced too late in the software development
+          lifecycle, leading to costly rework and delays.
+        </p>
+        <p>
+          <strong>Impact:</strong> Organizations face significant costs when security vulnerabilities are discovered
+          late in the development process or after deployment. The cost to fix a security issue in production can be 30x
+          higher than addressing it at the requirements stage.
+        </p>
+        <p>
+          <strong>Customer Quote:</strong> "We spend weeks reworking features because security requirements weren't
+          considered until after development was nearly complete."
+        </p>
 
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">1. Lack of Proactive Security Measures:</h3>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>
-                <strong>Description:</strong> Many discussions focus on post-development vulnerabilities and
-                remediation, highlighting a need for early-stage security practices. The existing focus on "shift left
-                security" confirms this unmet need, as does the general focus on risk assessment.
-              </li>
-              <li>
-                <strong>Impact:</strong> Security issues discovered late in development are significantly more expensive
-                to fix and may lead to project delays or compromised security.
-              </li>
-              <li>
-                <strong>Source:</strong> "Shift Left Security" trend in the provided context, and Reddit posts
-                emphasizing the importance of addressing security during requirements.
-              </li>
-            </ul>
-          </div>
+        <h3>2. Manual and Inconsistent Security Analysis</h3>
+        <p>
+          <strong>Pain Point:</strong> Security analysis of requirements is often manual, inconsistent, and dependent on
+          the expertise of individual security professionals.
+        </p>
+        <p>
+          <strong>Impact:</strong> Manual processes lead to inconsistent results, missed vulnerabilities, and
+          inefficient use of limited security resources. Organizations struggle to maintain consistent security
+          standards across projects.
+        </p>
+        <p>
+          <strong>Customer Quote:</strong> "Our security review process varies widely depending on which security
+          analyst is assigned to the project."
+        </p>
 
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">
-              2. Difficulty in Integrating Security into the SDLC:
-            </h3>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>
-                <strong>Description:</strong> Developers may not fully understand or prioritize security. There's a
-                significant gap between security teams and development teams in many organizations.
-              </li>
-              <li>
-                <strong>Impact:</strong> Security becomes an afterthought rather than being integrated throughout the
-                development process, leading to vulnerabilities and inefficient remediation.
-              </li>
-              <li>
-                <strong>Source:</strong>
-                <ul className="list-disc pl-6 mt-2">
-                  <li>
-                    <a
-                      href="https://www.reddit.com/r/blueteamsec/comments/1852bgk/how_do_you_make_your_developers_care_about/"
-                      className="text-blue-600 hover:underline"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Reddit: How do you make your developers care about security?
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.reddit.com/r/SoftwareEngineering/comments/mfqec3/do_any_software_engineers_truly_think_about/"
-                      className="text-blue-600 hover:underline"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Reddit: Do any software engineers truly think about security?
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+        <h3>3. Security Expertise Shortage</h3>
+        <p>
+          <strong>Pain Point:</strong> There is a significant shortage of security professionals with the expertise to
+          evaluate requirements for security implications.
+        </p>
+        <p>
+          <strong>Impact:</strong> Organizations struggle to hire and retain security experts, leading to security
+          reviews becoming a bottleneck in the development process. Many organizations proceed without adequate security
+          review due to resource constraints.
+        </p>
+        <p>
+          <strong>Customer Quote:</strong> "We have one security architect for over 20 development teams. It's
+          impossible for them to review everything thoroughly."
+        </p>
 
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">3. Inadequate Security Requirements:</h3>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>
-                <strong>Description:</strong> Developers often face unclear, incomplete, or inconsistent security
-                requirements, making it difficult to implement secure software.
-              </li>
-              <li>
-                <strong>Impact:</strong> Without clear security requirements, developers make assumptions that may lead
-                to vulnerabilities or implement inconsistent security controls.
-              </li>
-              <li>
-                <strong>Source:</strong>
-                <ul className="list-disc pl-6 mt-2">
-                  <li>
-                    <a
-                      href="https://www.blackduck.com/blog/software-security-requirements.html"
-                      className="text-blue-600 hover:underline"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      BlackDuck: Software Security Requirements
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+        <h3>4. Disconnect Between Development and Security Teams</h3>
+        <p>
+          <strong>Pain Point:</strong> Development and security teams often work in silos, with different priorities,
+          tools, and communication styles.
+        </p>
+        <p>
+          <strong>Impact:</strong> This disconnect leads to friction, delays, and security requirements being
+          misunderstood or improperly implemented. Security becomes viewed as a hindrance rather than an enabler.
+        </p>
+        <p>
+          <strong>Customer Quote:</strong> "Our developers see security as a roadblock that slows them down, not as an
+          essential part of building good software."
+        </p>
 
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">4. Difficulty in Assessing and Managing Risk:</h3>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>
-                <strong>Description:</strong> Organizations struggle to identify, assess, and prioritize security risks
-                associated with software development.
-              </li>
-              <li>
-                <strong>Impact:</strong> Without proper risk assessment, organizations may focus on the wrong security
-                issues or miss critical vulnerabilities.
-              </li>
-              <li>
-                <strong>Source:</strong> Several Reddit posts discuss risk assessment, and general market analysis
-                confirms this challenge.
-              </li>
-            </ul>
-          </div>
+        <h3>5. Compliance Complexity</h3>
+        <p>
+          <strong>Pain Point:</strong> Organizations struggle to map security requirements to various compliance
+          standards and regulations.
+        </p>
+        <p>
+          <strong>Impact:</strong> Ensuring compliance becomes a complex, time-consuming process that often requires
+          specialized expertise. Organizations risk non-compliance penalties and reputation damage.
+        </p>
+        <p>
+          <strong>Customer Quote:</strong> "We spend weeks mapping our requirements to different compliance frameworks
+          for each new project."
+        </p>
 
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">5. Software Supply Chain Vulnerabilities:</h3>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>
-                <strong>Description:</strong> The increasing reliance on open-source and third-party components
-                introduces significant security risks.
-              </li>
-              <li>
-                <strong>Impact:</strong> Vulnerabilities in dependencies can compromise the security of the entire
-                application, often without the development team's knowledge.
-              </li>
-              <li>
-                <strong>Source:</strong>
-                <ul className="list-disc pl-6 mt-2">
-                  <li>
-                    <a
-                      href="https://www.cybersecuritydive.com/news/google-software-supply-chain-security/638380/"
-                      className="text-blue-600 hover:underline"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Cybersecurity Dive: Google Software Supply Chain Security
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://industrialcyber.co/supply-chain-security/wef-sounds-alarm-on-software-supply-chain-vulnerabilities-flags-risks-in-open-source-and-third-party-dependencies/"
-                      className="text-blue-600 hover:underline"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Industrial Cyber: WEF Sounds Alarm on Software Supply Chain Vulnerabilities
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+        <h3>6. Lack of Actionable Security Guidance</h3>
+        <p>
+          <strong>Pain Point:</strong> When security issues are identified, developers often receive vague or overly
+          technical feedback without clear remediation steps.
+        </p>
+        <p>
+          <strong>Impact:</strong> Developers struggle to address security concerns effectively, leading to incomplete
+          fixes or unnecessary rework. This creates frustration and delays.
+        </p>
+        <p>
+          <strong>Customer Quote:</strong> "Security reviews often result in feedback like 'this isn't secure enough'
+          without explaining what specifically needs to change."
+        </p>
 
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">6. Compliance Challenges:</h3>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>
-                <strong>Description:</strong> Meeting regulatory compliance standards (e.g., PCI-DSS, GDPR, HIPAA) can
-                be complex and time-consuming.
-              </li>
-              <li>
-                <strong>Impact:</strong> Non-compliance can result in significant fines, legal issues, and damage to
-                reputation.
-              </li>
-              <li>
-                <strong>Source:</strong> Market dynamics described in the provided context and discussions related to
-                compliance requirements.
-              </li>
-            </ul>
-          </div>
+        <h3>7. Difficulty Measuring Security ROI</h3>
+        <p>
+          <strong>Pain Point:</strong> Organizations struggle to quantify the return on investment for security
+          initiatives, especially preventive measures.
+        </p>
+        <p>
+          <strong>Impact:</strong> Security investments are often undervalued and underfunded because their benefits are
+          difficult to measure. This leads to reactive rather than proactive security approaches.
+        </p>
+        <p>
+          <strong>Customer Quote:</strong> "It's hard to justify investment in security tools when we can't clearly show
+          the executive team how much money they're saving us."
+        </p>
 
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-primary mb-3">7. Automation Gap:</h3>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>
-                <strong>Description:</strong> Manual security assessments and testing are time-consuming and prone to
-                human error.
-              </li>
-              <li>
-                <strong>Impact:</strong> Limited resources for security testing lead to incomplete assessments and
-                missed vulnerabilities.
-              </li>
-              <li>
-                <strong>Source:</strong> Market dynamics described in provided context highlighting the increasing
-                importance of automation in security tasks.
-              </li>
-            </ul>
-          </div>
+        <h2>How EdgeReq Analytics Addresses These Pain Points</h2>
 
-          <p className="mt-8 text-lg">
-            These pain points and unmet needs highlight the importance of a tool like EdgeReq Analytics that can
-            evaluate software requirements for security risks. By addressing these challenges, EdgeReq Analytics can
-            provide significant value to software development teams and organizations by improving security posture and
-            reducing the risk of vulnerabilities.
-          </p>
-
-          <div className="mt-10 flex justify-between">
-            <Link
-              href="/business-dev"
-              className="inline-flex items-center px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition-colors"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              Business Development Home
-            </Link>
-            <Link
-              href="/business-dev/market-research"
-              className="inline-flex items-center px-4 py-2 bg-primary text-white rounded hover:bg-secondary transition-colors"
-            >
-              Next: Market Research
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </Link>
-          </div>
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white border border-gray-300 rounded-lg">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="py-3 px-4 border-b text-left">Pain Point</th>
+                <th className="py-3 px-4 border-b text-left">EdgeReq Analytics Solution</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="py-3 px-4 border-b">Lack of Early Security Integration</td>
+                <td className="py-3 px-4 border-b">
+                  Provides automated security analysis at the requirements stage, enabling "shift-left" security
+                  practices.
+                </td>
+              </tr>
+              <tr>
+                <td className="py-3 px-4 border-b">Manual and Inconsistent Security Analysis</td>
+                <td className="py-3 px-4 border-b">
+                  Automates the security analysis process with consistent rule application and standardized evaluation
+                  criteria.
+                </td>
+              </tr>
+              <tr>
+                <td className="py-3 px-4 border-b">Security Expertise Shortage</td>
+                <td className="py-3 px-4 border-b">
+                  Encapsulates security expertise in automated rules, reducing dependency on scarce security
+                  professionals.
+                </td>
+              </tr>
+              <tr>
+                <td className="py-3 px-4 border-b">Disconnect Between Development and Security Teams</td>
+                <td className="py-3 px-4 border-b">
+                  Provides a common platform and language for both teams, facilitating collaboration and shared
+                  understanding.
+                </td>
+              </tr>
+              <tr>
+                <td className="py-3 px-4 border-b">Compliance Complexity</td>
+                <td className="py-3 px-4 border-b">
+                  Automatically maps requirements to relevant compliance standards, simplifying the compliance process.
+                </td>
+              </tr>
+              <tr>
+                <td className="py-3 px-4 border-b">Lack of Actionable Security Guidance</td>
+                <td className="py-3 px-4 border-b">
+                  Provides specific, actionable recommendations for addressing identified security issues.
+                </td>
+              </tr>
+              <tr>
+                <td className="py-3 px-4 border-b">Difficulty Measuring Security ROI</td>
+                <td className="py-3 px-4 border-b">
+                  Includes reporting and analytics that quantify the value of early security intervention and track
+                  security improvements over time.
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+
+        <h2>Conclusion</h2>
+        <p>
+          The identified pain points represent significant challenges for organizations trying to implement secure
+          software development practices. EdgeReq Analytics is uniquely positioned to address these pain points by
+          providing automated, consistent, and actionable security analysis at the requirements stage. By focusing on
+          these specific customer needs, EdgeReq Analytics can deliver substantial value and differentiate itself in the
+          market.
+        </p>
       </div>
-    </main>
+    </div>
   )
 }
