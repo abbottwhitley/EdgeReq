@@ -67,6 +67,17 @@ EdgeReq Analytics is a desktop-first application designed to identify downstream
 - **Performance on Large Documents**: Optimize Rust engine and async processing
 - **Sync Conflicts**: Consider CRDTs or OT for peer-to-peer consistency
 
+### Requirement Analysis Strategy Comparison
+To support the MVP focus of EdgeReq Analytics—automated analysis of software requirements for potential security risks—the following strategies are considered for parsing and interpreting natural language requirements:
+| Strategy                   | Description                                                                 | Strengths                                                             | Limitations                                                            |
+|---------------------------|-----------------------------------------------------------------------------|----------------------------------------------------------------------|------------------------------------------------------------------------|
+| Rule-Based Parsing        | Uses static rules and patterns to detect known issues in requirement text  | Fast, deterministic, easy to audit                                   | Limited to known patterns, not flexible to language variation          |
+| Regex / Pattern Matching  | Uses regex to find ambiguous terms or insecure phrasing                    | Simple implementation, works well on small documents                 | Hard to scale, prone to false positives/negatives                     |
+| NLP Pipelines             | Classical NLP techniques like POS tagging, dependency parsing               | Can detect structure and relationships in text                       | Less accurate for semantics, needs heavy tuning                      |
+| ML-Based Classification   | Trains models to classify requirement quality (e.g., complete vs incomplete)| Learns from data, generalizes well                                  | Needs large labeled datasets, training time                         |
+| LLM-Driven Analysis       | Uses language models like GPT to interpret and assess requirement quality   | High contextual awareness, flexible, explainable output              | Resource-intensive, potential hallucination, needs prompt engineering |
+| Hybrid (Rules + LLM)      | Combines fast deterministic rules with deep analysis via LLMs              | Balances speed and depth, reduces false positives, contextual awareness | More complex architecture, tuning both systems required              |
+
 ## Future Expansion Possibilities
 - Support for secure design document review
 - ML/NLP-based threat predictions
